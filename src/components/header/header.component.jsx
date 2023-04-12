@@ -9,7 +9,7 @@ const Header = () => {
 		<header className='header' id='header'>
 			<img src={MJLogo} alt='Mac Jones Logo' className='header__logo' />
 
-			<h1 className='heading-1'>Mac Jones G. Soriano</h1>
+			<h1 className='heading-1'>Mac Jones Soriano</h1>
 			<div className='header__paragraph'>A Frontend Developer</div>
 			<div className='header__button-container'>
 				<a href={Resume} download className='btn header__btn'>

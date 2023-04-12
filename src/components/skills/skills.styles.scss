@@ -12,15 +12,27 @@
 
 	&-container {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 		grid-template-rows: repeat(auto-fit, 21rem);
 		grid-gap: 4rem;
 		justify-items: center;
+
+		@media only screen and (max-width: $bp-medium) {
+			margin: 8rem 0;
+			grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+			grid-gap: 2rem;
+		}
+
+		@media only screen and (max-width: $bp-small) {
+			margin: 8rem 0;
+			grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+			grid-gap: 2rem;
+		}
 	}
 }
 
 .skill {
-	width: 18rem;
+	width: 20rem;
 	background-color: $color-grey-light-1;
 	border: 2px solid $color-primary-dark;
 	text-align: center;
@@ -96,5 +108,13 @@
 		&-github {
 			color: #181717;
 		}
+	}
+
+	@media only screen and (max-width: $bp-medium) {
+		width: 17rem;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		width: 15rem;
 	}
 }
