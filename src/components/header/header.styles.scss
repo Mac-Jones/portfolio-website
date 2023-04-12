@@ -1,0 +1,71 @@
+@import '../../sass/main.scss';
+
+.header {
+	grid-column: full-start / col-end 7;
+
+	background-image: linear-gradient(
+			rgba($color-secondary, 0.8),
+			rgba($color-secondary, 0.8)
+		),
+		url(../../img/tothemoon.jpg);
+	background-size: cover;
+	background-position: center;
+	padding: 8rem;
+
+	display: grid;
+	grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+	grid-template-columns: minmax(min-content, max-content);
+	justify-content: center;
+	row-gap: 1.5rem;
+
+	@media only screen and (max-width: $bp-medium) {
+		grid-column: full-start / full-end;
+	}
+
+	@media only screen and (max-width: $bp-small) {
+		padding: 5rem;
+		row-gap: 1.3rem;
+	}
+}
+
+.header {
+	h1 {
+		margin: 0;
+	}
+
+	&__paragraph {
+		font-size: 2rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $color-grey-light-2;
+		display: grid;
+		grid-template-columns: 1fr max-content 1fr;
+		column-gap: 1.5rem;
+		align-items: center;
+
+		&::before,
+		&::after {
+			content: '';
+			height: 2px;
+			display: block;
+			background-color: currentColor;
+		}
+	}
+
+	&__logo {
+		height: 5.5rem;
+		justify-self: center;
+	}
+
+	&__button-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 1rem;
+
+		& > a {
+			text-decoration: none;
+			width: max-content;
+		}
+	}
+}

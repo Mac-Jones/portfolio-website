@@ -1,0 +1,112 @@
+@import '../../sass/main.scss';
+
+.contact {
+	background-color: $color-grey-light-1;
+	grid-column: full-start / full-end;
+	padding-bottom: 8rem;
+
+	&__header {
+		width: 100%;
+		height: 12rem;
+		// line-height: 2.5;
+		background-color: $color-secondary;
+		clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 80%, 0 100%, 0 0);
+	}
+
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+		justify-items: center;
+		margin-top: 5rem;
+	}
+
+	&__options {
+		width: minmax(25rem, 100%);
+		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.3rem;
+	}
+
+	&__btn {
+		align-self: center;
+		font-size: 3rem;
+	}
+
+	&__option {
+		color: #000;
+		background: transparent;
+		font-size: 1.5rem;
+		padding: 2.8rem;
+		border: 2px solid $color-grey-dark-1;
+		border-radius: 1rem;
+		text-align: center;
+		transition: all 0.4s;
+
+		&-gmail {
+			color: #db4437;
+		}
+
+		&-messenger {
+			color: #0084ff;
+		}
+
+		&-whatsapp {
+			color: #25d366;
+		}
+
+		&-icon {
+			font-size: 3rem;
+			margin-bottom: 0.5rem;
+		}
+
+		& > h4 {
+			font-size: 1.8rem;
+		}
+
+		& > h5 {
+			font-size: 1.5rem;
+		}
+
+		& > a:link,
+		& > a:visited {
+			text-decoration: none;
+			font-weight: 700;
+			margin-top: 0.7rem;
+			margin-top: 1rem;
+			font-size: 1.8rem;
+			padding: 0.8rem 2rem;
+			color: $color-primary;
+		}
+
+		&:hover {
+			a {
+				color: $color-primary-dark;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	// ============
+	&__form {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		// justify-content: flex-start;
+		margin-top: 5rem;
+		align-items: center;
+		gap: 1.2rem;
+
+		input,
+		textarea {
+			font-size: 1.4rem;
+			width: 90%;
+			padding: 1.5rem;
+			border-radius: 0.5rem;
+			background: transparent;
+			border: 2px solid $color-secondary;
+			resize: none;
+			color: $color-secondary;
+		}
+	}
+}

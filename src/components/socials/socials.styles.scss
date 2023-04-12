@@ -1,0 +1,52 @@
+@import '../../sass/main.scss';
+
+.socials {
+	background-color: $color-secondary;
+	grid-column: col-end 7 / full-end;
+	height: 100vh;
+	display: grid;
+	align-content: center;
+
+	@media only screen and (max-width: $bp-medium) {
+		grid-column: full-start / full-end;
+		height: 20vh;
+	}
+}
+
+.social {
+	&__list {
+		list-style: none;
+		display: grid;
+		grid-template-columns: min-content;
+		row-gap: 3vw;
+		justify-content: center;
+		align-items: center;
+
+		&::after,
+		&::before {
+			content: '';
+			width: 2px;
+			height: 10rem;
+			background-color: $color-primary;
+			justify-self: center;
+		}
+
+		@media only screen and (max-width: $bp-medium) {
+			grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+			row-gap: 1rem;
+			justify-items: center;
+			&::after,
+			&::before {
+				content: '';
+				height: 2px;
+				width: 9rem;
+				background-color: $color-primary;
+			}
+		}
+	}
+
+	&__icon {
+		font-size: 3rem;
+		color: $color-primary;
+	}
+}

@@ -1,0 +1,100 @@
+@import '../../sass/main.scss';
+
+.skills {
+	&-section {
+		grid-column: center-start / center-end;
+		margin: 12rem 0;
+
+		@media only screen and (max-width: $bp-small) {
+			margin: 8rem 0;
+		}
+	}
+
+	&-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+		grid-template-rows: repeat(auto-fit, 21rem);
+		grid-gap: 4rem;
+		justify-items: center;
+	}
+}
+
+.skill {
+	width: 20rem;
+	background-color: $color-grey-light-1;
+	border: 2px solid $color-primary-dark;
+	text-align: center;
+	border-radius: 0.5rem;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+	&__title {
+		background-color: $color-grey-dark-1;
+		color: #fff;
+		font-size: 2rem;
+		padding: 2rem 2rem 1rem;
+		margin-bottom: -1px;
+
+		clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+		align-self: stretch;
+		justify-self: end;
+	}
+
+	&__icon {
+		font-size: 12rem;
+		padding-top: 1rem;
+
+		&-html {
+			color: #e34c26;
+		}
+
+		&-css {
+			color: #1572b6;
+		}
+
+		&-javascript {
+			color: #f7df1e;
+		}
+
+		&-sass {
+			color: #cd6799;
+		}
+
+		&-react {
+			color: #61dafb;
+		}
+
+		&-react-native {
+			color: #61dafb;
+		}
+
+		&-nodejs {
+			color: #3c873a;
+		}
+
+		&-typescript {
+			color: #007acc;
+		}
+
+		&-graphql {
+			color: #e535ab;
+		}
+
+		&-gatsby {
+			color: #744c9e;
+		}
+
+		&-git {
+			color: #f05032;
+		}
+
+		&-github {
+			color: #181717;
+		}
+	}
+}
