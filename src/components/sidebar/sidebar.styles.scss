@@ -2,34 +2,52 @@
 
 .sidebar {
 	background-color: $color-primary;
-	// background-color: $color-secondary;
 	grid-column: sidebar-start / sidebar-end;
 	grid-row: 1 / -1;
 
 	display: flex;
-	justify-content: center;
-	align-items: flex-start;
+	flex-direction: column-reverse;
+	align-items: center;
+	justify-content: flex-end;
 
 	&__logo {
 		width: 3rem;
 		height: 3rem;
 	}
 
-	// ===========
-	@media only screen and (max-width: $bp-largest) {
-		grid-column: 1 / -1;
-		grid-row: 1 / 2;
-		background-color: $color-secondary;
-		justify-content: space-between;
+	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		align-items: center;
-		padding: 0 2rem;
+		gap: 1.5rem;
+		background-color: $color-secondary;
+		width: 100vw;
+		height: 100vh;
+		transition: all 1s;
+		transform: translateX(-100%);
+		z-index: 100;
 
-		nav a {
-			margin: 0 2rem;
+		.nav-close-btn {
+			color: $color-primary;
+			position: absolute;
+			top: 0;
+			left: 2rem;
+		}
+
+		& a {
+			width: 20rem;
+			padding: 1rem 4rem;
 			color: $color-grey-light-2;
+			text-align: center;
 			text-decoration: none;
-			font-size: 2rem;
-			padding: 0.8rem 1.8rem;
+			font-size: 3rem;
+			font-weight: 400;
 			transition: all 0.2s;
 
 			&:hover {
@@ -37,46 +55,48 @@
 				background-color: $color-primary;
 			}
 		}
-
-		.nav-btn {
-			font-size: 2.5rem;
-			padding: 0.6rem;
-			cursor: pointer;
-			background-color: transparent;
-			border: none;
-			outline: none;
-			color: $color-primary;
-			visibility: hidden;
-			opacity: 0;
-		}
 	}
 
-	@media only screen and (max-width: $bp-medium) {
+	.nav-btn {
+		font-size: 3.5rem;
+		margin-top: 1rem;
+		padding: 0.6rem;
+		cursor: pointer;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		color: $color-secondary;
+	}
+
+	.responsive_nav {
+		transform: none;
+	}
+
+	@media only screen and (max-width: $bp-largest) {
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+		background-color: $color-secondary;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 2rem;
+
 		.nav-btn {
+			color: $color-primary;
 			visibility: visible;
 			opacity: 1;
 		}
 
 		nav {
-			position: fixed;
-			top: 1rem;
-			left: 0;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			gap: 1.5rem;
-			background-color: $color-secondary;
-			width: 100vw;
-			height: 100vh;
-			transition: all 1s;
-			transform: translateY(-100vh);
+			transform: translateY(-100%);
 
 			.nav-close-btn {
+				color: $color-primary;
 				position: absolute;
-				top: 1rem;
-				right: 4rem;
-				z-index: 5;
+				top: 0.5rem;
+				left: 82%;
+				right: 2rem;
 			}
 		}
 
@@ -85,43 +105,3 @@
 		}
 	}
 }
-
-// ========== FIRST CODE ============
-// .nav-btn {
-// margin-top: 4rem;
-// border: none;
-// border-radius: 0;
-// background-color: #fff;
-// height: 2px;
-// width: 4.5rem;
-
-// &::before,
-// &::after {
-// 	content: '';
-// 	display: block;
-// 	height: 2px;
-// 	width: 4.5rem;
-// 	background-color: #fff;
-// }
-
-// &::before {
-// 	transform: translateY(-1.5rem);
-// }
-
-// &::after {
-// 	transform: translateY(1.3rem);
-// }
-
-// @media only screen and (max-width: $bp-large) {
-// margin-top: 0;
-// margin-right: 2rem;
-
-// &::before {
-// 	transform: translateY(-1.2rem);
-// }
-
-// &::after {
-// 	transform: translateY(1rem);
-// }
-// 	}
-// }

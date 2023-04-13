@@ -2,7 +2,7 @@ import './footer.styles.scss';
 
 const Footer = () => {
 	return (
-		<footer className='footer'>
+		<footer className='footer' id='footer'>
 			{/* <h1 className='heading-1'>MacJones</h1> */}
 			<ul className='nav'>
 				<li className='nav__item'>

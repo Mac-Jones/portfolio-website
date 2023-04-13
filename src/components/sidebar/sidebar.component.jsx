@@ -10,7 +10,6 @@ const Sidebar = () => {
 	const navRef = useRef();
 
 	const showNavBar = () => {
-		console.log('haha');
 		navRef.current.classList.toggle('responsive_nav');
 	};
 
@@ -18,11 +17,21 @@ const Sidebar = () => {
 		<div className='sidebar'>
 			<img src={MJLogo} alt='Mac Jones Logo' className='sidebar__logo' />
 			<nav ref={navRef}>
-				<a href='/#'>Home</a>
-				<a href='/#'>Story</a>
-				<a href='/#'>Skills</a>
-				<a href='/#'>Projects</a>
-				<a href='/#'>Footer</a>
+				<a href='/#header' onClick={showNavBar}>
+					Home
+				</a>
+				<a href='/#story' onClick={showNavBar}>
+					Story
+				</a>
+				<a href='/#skills' onClick={showNavBar}>
+					Skills
+				</a>
+				<a href='/#projects' onClick={showNavBar}>
+					Projects
+				</a>
+				<a href='/#footer' onClick={showNavBar}>
+					Footer
+				</a>
 				<button className='nav-btn nav-close-btn'>
 					<FaTimes onClick={showNavBar} />
 				</button>
