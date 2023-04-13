@@ -20,7 +20,7 @@ $font-display: 'Josefin Sans', sans-serif;
 $bp-largest: 75em; // 1200
 $bp-large: 62.5em; // 1000
 $bp-medium: 50em; // 800
-$bp-small: 35em; // 600
+$bp-small: 35em; // 560
 
 *,
 *::before,
@@ -56,11 +56,15 @@ body {
 		[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
 		[center-end] minmax(6rem, 1fr) [full-end];
 
+	@media only screen and (max-width: $bp-largest) {
+		grid-template-rows: 8rem calc(80vh - 6rem);
+		grid-template-columns:
+			[ full-start] minmax(6rem, 1fr)
+			[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+			[center-end] minmax(6rem, 1fr) [full-end];
+	}
 	@media only screen and (max-width: $bp-large) {
-		grid-template-rows: 6rem calc(100vh - 6rem) min-content repeat(
-				6,
-				min-content
-			);
+		grid-template-rows: 8rem calc(80vh - 6rem);
 		grid-template-columns:
 			[ full-start] minmax(6rem, 1fr)
 			[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
