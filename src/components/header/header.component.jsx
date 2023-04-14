@@ -10,7 +10,7 @@ const Header = () => {
 			<img src={MJLogo} alt='Mac Jones Logo' className='header__logo' />
 
 			<h1 className='heading-1'>Mac Jones Soriano</h1>
-			<div className='header__paragraph'>Frontend Developer</div>
+			<div className='header__paragraph'>Frontend Web Developer</div>
 			<div className='header__button-container'>
 				<a href={Resume} download className='btn header__btn'>
 					Download Resume
