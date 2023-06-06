@@ -1,6 +1,6 @@
 import Calculator from '../../img/calculator.jpg';
 
-import Ecommerce from '../../img/ecommerce.jpg';
+import MjStore from '../../img/mj-store.png';
 import PersonalBlog from '../../img/personal-blog.png';
 import PigGame from '../../img/pig-game.png';
 import Food from '../../img/food.png';
@@ -19,11 +19,11 @@ const projectsData = [
 	},
 	{
 		id: 2,
-		image: Ecommerce,
-		title: 'Crown Clothing',
+		image: MjStore,
+		title: 'Mac Jones Store',
 		description: 'E-Commerce App using React, TypeScript, Redux, etc',
-		github: 'https://github.com/Mac-Jones/Crown-Clothing',
-		demo: 'https://crown-clothing-reactjs.netlify.app/',
+		github: 'https://github.com/Mac-Jones/mac-jones-store',
+		demo: 'https://mac-jones-store-reactjs-redux.netlify.app',
 	},
 	{
 		id: 3,
@@ -57,7 +57,7 @@ const projectsData = [
 		description: 'Javascript Game using HTML, CSS and Javascript',
 		github: 'https://github.com/Mac-Jones/breakout-game-javascript',
 		demo: 'https://breakout-macjones.netlify.app/',
-	},
+	}
 ];
 
 const ProjectsData = () => {

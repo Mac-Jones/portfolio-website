@@ -1,3 +1,4 @@
+// import { Element } from 'react-scroll';
 import './footer.styles.scss';
 
 const Footer = () => {
