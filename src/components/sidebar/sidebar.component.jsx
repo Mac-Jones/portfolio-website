@@ -10,7 +10,6 @@ const Sidebar = () => {
 	const navRef = useRef();
 
 	const showNavBar = () => {
-		console.log(navRef.current);
 		navRef.current.classList.toggle('responsive_nav');
 	};
 

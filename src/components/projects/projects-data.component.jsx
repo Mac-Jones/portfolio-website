@@ -5,6 +5,7 @@ import PersonalBlog from '../../img/personal-blog.png';
 import PigGame from '../../img/pig-game.png';
 import Food from '../../img/food.png';
 import Breakout from '../../img/breakout-game.png';
+import Monster from '../../img/Monster.png';
 
 import './projects.styles.scss';
 
@@ -27,11 +28,11 @@ const projectsData = [
 	},
 	{
 		id: 3,
-		image: PersonalBlog,
-		title: 'My Personal Blog',
-		description: 'Simple Blog using Gatsby',
-		github: 'https://github.com/Mac-Jones/gatsby-blog-mj',
-		demo: 'https://macjones-blog.netlify.app',
+		image: Monster,
+		title: 'Monsters Rolodex',
+		description: 'Search for Monster using React and Typescript',
+		github: 'https://github.com/Mac-Jones/monster-rolodex',
+		demo: 'https://monsters-rolodex-mj.netlify.app/',
 	},
 
 	{
@@ -57,7 +58,16 @@ const projectsData = [
 		description: 'Javascript Game using HTML, CSS and Javascript',
 		github: 'https://github.com/Mac-Jones/breakout-game-javascript',
 		demo: 'https://breakout-macjones.netlify.app/',
-	}
+	},
+
+	{
+		id: 7,
+		image: PersonalBlog,
+		title: 'My Personal Blog',
+		description: 'Simple Blog using Gatsby',
+		github: 'https://github.com/Mac-Jones/gatsby-blog-mj',
+		demo: 'https://macjones-blog.netlify.app',
+	},
 ];
 
 const ProjectsData = () => {
