@@ -47,17 +47,18 @@ body {
 	line-height: 1.6;
 }
 .container {
+	position: relative;
 	display: grid;
 	grid-template-rows:
 		100vh 45vw
 		repeat(6, min-content);
 	grid-template-columns:
-		[sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr)
+		[full-start] minmax(6rem, 1fr)
 		[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
 		[center-end] minmax(6rem, 1fr) [full-end];
 
 	@media only screen and (max-width: $bp-largest) {
-		grid-template-rows: 8rem calc(85vh - 6rem);
+		grid-template-rows: 85vh;
 		grid-template-columns:
 			[ full-start] minmax(6rem, 1fr)
 			[center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
@@ -70,3 +71,109 @@ body {
 			[center-end] minmax(6rem, 1fr) [full-end];
 	}
 }
+
+// .sidebar {
+// 	background-color: $color-primary;
+// 	grid-column: sidebar-start / sidebar-end;
+// 	grid-row: 1 / -1;
+
+// 	display: flex;
+// 	flex-direction: column-reverse;
+// 	align-items: center;
+// 	justify-content: flex-end;
+
+// 	&__logo {
+// 		width: 3rem;
+// 		height: 3rem;
+// 	}
+
+// 	nav {
+// 		position: fixed;
+// 		top: 0;
+// 		left: 0;
+// 		right: 0;
+// 		bottom: 0;
+// 		display: flex;
+// 		flex-direction: column;
+// 		justify-content: center;
+// 		align-items: center;
+// 		gap: 1.5rem;
+// 		background-color: $color-secondary;
+// 		width: 100vw;
+// 		height: 100vh;
+// 		transition: all 1s;
+// 		transform: translateX(-100%);
+// 		z-index: 100;
+
+// 		.nav-close-btn {
+// 			color: $color-primary;
+// 			position: absolute;
+// 			top: 0;
+// 			left: 2rem;
+// 		}
+
+// 		& a {
+// 			width: 20rem;
+// 			padding: 1rem 4rem;
+// 			color: $color-grey-light-2;
+// 			text-align: center;
+// 			text-decoration: none;
+// 			font-size: 3rem;
+// 			font-weight: 400;
+// 			transition: all 0.2s;
+
+// 			&:hover {
+// 				color: #fff;
+// 				background-color: $color-primary;
+// 			}
+// 		}
+// 	}
+
+// 	.nav-btn {
+// 		font-size: 3.5rem;
+// 		margin-top: 1rem;
+// 		padding: 0.6rem;
+// 		cursor: pointer;
+// 		background-color: transparent;
+// 		border: none;
+// 		outline: none;
+// 		color: $color-secondary;
+// 	}
+
+// 	.responsive_nav {
+// 		transform: none;
+// 	}
+
+// 	@media only screen and (max-width: $bp-largest) {
+// 		grid-column: 1 / -1;
+// 		grid-row: 1 / 2;
+// 		background-color: $color-secondary;
+// 		display: flex;
+// 		flex-direction: row;
+// 		justify-content: space-between;
+// 		align-items: center;
+// 		padding: 0 2rem;
+
+// 		.nav-btn {
+// 			color: $color-primary;
+// 			visibility: visible;
+// 			opacity: 1;
+// 		}
+
+// 		nav {
+// 			transform: translateY(-100%);
+
+// 			.nav-close-btn {
+// 				color: $color-primary;
+// 				position: absolute;
+// 				top: 0.5rem;
+// 				left: 82%;
+// 				right: 2rem;
+// 			}
+// 		}
+
+// 		.responsive_nav {
+// 			transform: none;
+// 		}
+// 	}
+// }

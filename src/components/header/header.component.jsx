@@ -6,7 +6,7 @@ import './header.styles.scss';
 
 const Header = () => {
 	return (
-		<header className='header' id='header'>
+		<header className='header' id='header-section'>
 			<img src={MJLogo} alt='Mac Jones Logo' className='header__logo' />
 
 			<h1 className='heading-1'>Mac Jones Soriano</h1>

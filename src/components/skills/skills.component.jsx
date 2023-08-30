@@ -16,7 +16,7 @@ import './skills.styles.scss';
 
 const Skills = () => {
 	return (
-		<section className='skills-section' id='skills'>
+		<section className='skills-section' id='skills-section'>
 			<h1>My Skills</h1>
 			<div className='skills-container'>
 				<div className='skill'>
