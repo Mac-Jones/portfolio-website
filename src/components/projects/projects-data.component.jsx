@@ -17,7 +17,7 @@ const projectsData = [
 		id: uuidv4(),
 		image: nikeApp,
 		title: 'Nike App',
-		description: 'Nike Website using React with Vite',
+		description: 'Nike Website using Tailwind CSS and React library with Vite',
 		github: 'https://github.com/Mac-Jones/nike-app-tailwind',
 		demo: 'https://nike-app-tailwind-css.netlify.app/',
 	},
