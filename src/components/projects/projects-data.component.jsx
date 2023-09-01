@@ -1,17 +1,28 @@
-import Calculator from '../../img/calculator.jpg';
+import { v4 as uuidv4 } from 'uuid';
 
+import Calculator from '../../img/calculator.jpg';
 import MjStore from '../../img/mj-store.png';
 import PersonalBlog from '../../img/personal-blog.png';
 import PigGame from '../../img/pig-game.png';
 import Food from '../../img/food.png';
 import Breakout from '../../img/breakout-game.png';
 import Monster from '../../img/Monster.png';
+import funRun from '../../img/fun-run.png';
+import nikeApp from '../../img/nike-app.png';
 
 import './projects.styles.scss';
 
 const projectsData = [
 	{
-		id: 1,
+		id: uuidv4(),
+		image: nikeApp,
+		title: 'Nike App',
+		description: 'Nike Website using React with Vite',
+		github: 'https://github.com/Mac-Jones/nike-app-tailwind',
+		demo: 'https://nike-app-tailwind-css.netlify.app/',
+	},
+	{
+		id: uuidv4(),
 		image: Calculator,
 		title: 'Calculator App',
 		description: 'Simple Calculator App using React',
@@ -19,7 +30,7 @@ const projectsData = [
 		demo: 'https://simple-calculator-reactjs-mj.netlify.app/',
 	},
 	{
-		id: 2,
+		id: uuidv4(),
 		image: MjStore,
 		title: 'Mac Jones Store',
 		description: 'E-Commerce App using React, TypeScript, Redux, etc',
@@ -27,7 +38,7 @@ const projectsData = [
 		demo: 'https://mac-jones-store-reactjs-redux.netlify.app',
 	},
 	{
-		id: 3,
+		id: uuidv4(),
 		image: Monster,
 		title: 'Monsters Rolodex',
 		description: 'Search for Monster using React and Typescript',
@@ -36,7 +47,7 @@ const projectsData = [
 	},
 
 	{
-		id: 4,
+		id: uuidv4(),
 		image: PigGame,
 		title: 'Pig Game',
 		description: 'Pig Game using Javascript, HTML, and CSS',
@@ -44,7 +55,7 @@ const projectsData = [
 		demo: 'https://pig-game-mac-jones.netlify.app/',
 	},
 	{
-		id: 5,
+		id: uuidv4(),
 		image: Food,
 		title: 'Recipe App',
 		description: 'Food Recipe Website using Javascript',
@@ -52,7 +63,7 @@ const projectsData = [
 		demo: 'https://recipe-app-macjones.netlify.app',
 	},
 	{
-		id: 6,
+		id: uuidv4(),
 		image: Breakout,
 		title: 'Breakout',
 		description: 'Javascript Game using HTML, CSS and Javascript',
@@ -61,10 +72,20 @@ const projectsData = [
 	},
 
 	{
-		id: 7,
+		id: uuidv4(),
 		image: PersonalBlog,
 		title: 'My Personal Blog',
 		description: 'Simple Blog using Gatsby',
+		github: 'https://github.com/Mac-Jones/gatsby-blog-mj',
+		demo: 'https://macjones-blog.netlify.app',
+	},
+
+	{
+		id: uuidv4(),
+		image: funRun,
+		title: 'Fun Run Registration',
+		description:
+			'Capture form data, display it on a separate page using jQuery DataTables',
 		github: 'https://github.com/Mac-Jones/gatsby-blog-mj',
 		demo: 'https://macjones-blog.netlify.app',
 	},
