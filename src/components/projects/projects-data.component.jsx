@@ -9,6 +9,7 @@ import Breakout from '../../img/breakout-game.png';
 import Monster from '../../img/Monster.png';
 import funRun from '../../img/fun-run.png';
 import nikeApp from '../../img/nike-app.png';
+import promptopia from '../../img/promptopia.png';
 
 import './projects.styles.scss';
 
@@ -20,6 +21,14 @@ const projectsData = [
 		description: 'Nike Website using Tailwind CSS and React library with Vite',
 		github: 'https://github.com/Mac-Jones/nike-app-tailwind',
 		demo: 'https://nike-app-tailwind-css.netlify.app/',
+	},
+	{
+		id: uuidv4(),
+		image: promptopia,
+		title: 'Promptopia',
+		description: 'Full-Stack App using nextjs',
+		github: 'https://github.com/Mac-Jones/promptopia',
+		demo: 'https://promptopia-cygqn8tia-mac-jones.vercel.app/',
 	},
 	{
 		id: uuidv4(),
