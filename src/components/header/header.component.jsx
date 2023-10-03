@@ -1,7 +1,5 @@
 import MJLogo from '../../img/mj-logo-primary-transparent.png';
-
-import Resume from '../../img/mac-jones-resume.pdf';
-
+import { resume } from '../../assets';
 import './header.styles.scss';
 
 const Header = () => {
@@ -12,7 +10,7 @@ const Header = () => {
 			<h1 className='heading-1'>Mac Jones Soriano</h1>
 			<div className='header__paragraph'>Frontend Web Developer</div>
 			<div className='header__button-container'>
-				<a href={Resume} download className='btn header__btn'>
+				<a href={resume} download className='btn header__btn'>
 					Download Resume
 				</a>
 				<a href='#contact' className='btn-transparent header__btn'>

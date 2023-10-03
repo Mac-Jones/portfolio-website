@@ -14,7 +14,6 @@ const Contact = () => {
 	};
 
 	const [state, handleSubmit] = useForm('mwkjnkal');
-	//
 	const [defaulInput, setDefaultInput] = useState(defaultInputTypes);
 	const { name, email, message } = defaulInput;
 
@@ -95,16 +94,10 @@ const Contact = () => {
 							rows='10'
 							placeholder='Your Message'
 							value=''
-							// value={message}
 							onChange={handleChange}
 							required
 						></textarea>
-						<button
-							type='submit'
-							className='btn contact__btn'
-							disabled
-							// disabled={state.submitting}
-						>
+						<button type='submit' className='btn contact__btn' disabled>
 							Send Message
 						</button>
 					</form>
@@ -160,7 +153,6 @@ const Contact = () => {
 						</a>
 					</article>
 				</div>
-				{/* END OF CONTACT OPTION */}
 
 				<form className='contact__form' onSubmit={handleSubmit}>
 					<input
