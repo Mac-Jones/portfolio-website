@@ -31,7 +31,8 @@ const projects = [
 	{
 		image: threads,
 		title: 'Threads Social Media',
-		description: 'Nike Website using Tailwind CSS and React library with Vite',
+		description:
+			'Threads App Clone, Using Nextjs, Clerk for authentication, and MongoDB',
 		github: 'https://github.com/Mac-Jones/threads-app',
 		demo: 'https://threads-app-liart.vercel.app/',
 	},
