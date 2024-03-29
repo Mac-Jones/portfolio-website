@@ -34,7 +34,6 @@ const Navigation = () => {
 			const navigationLink = document.querySelector(
 				`[data-target='${sectionId}']`
 			);
-
 			if (
 				section.getBoundingClientRect().top <= 100 &&
 				section.getBoundingClientRect().bottom > 100
@@ -100,6 +99,7 @@ const Navigation = () => {
 				>
 					Projects
 				</a>
+
 				<button className='nav-btn nav-close-btn'>
 					<FaTimes onClick={toggleNavContainer} />
 				</button>
@@ -112,50 +112,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
-// import { FaBars, FaTimes } from 'react-icons/fa';
-// import { useRef } from 'react';
-// import { Link } from 'react-scroll';
-
-// import MJLogo from '../../img/mj-logo-primary-transparent.png';
-
-// import './sidebar.styles.scss';
-
-// const Sidebar = () => {
-// 	const navRef = useRef();
-
-// 	const showNavBar = () => {
-// 		navRef.current.classList.toggle('responsive_nav');
-// 	};
-
-// 	return (
-// 		<div className='sidebar'>
-// 			<img src={MJLogo} alt='Mac Jones Logo' className='sidebar__logo' />
-// 			<nav ref={navRef}>
-// 				<Link to='header' onClick={showNavBar}>
-// 					Home
-// 				</Link>
-// 				<Link to='story' onClick={showNavBar}>
-// 					Story
-// 				</Link>
-// 				<Link to='skills' onClick={showNavBar}>
-// 					Skills
-// 				</Link>
-// 				<Link to='projects' onClick={showNavBar}>
-// 					Projects
-// 				</Link>
-// 				<Link to='footer' onClick={showNavBar}>
-// 					Footer
-// 				</Link>
-// 				<button className='nav-btn nav-close-btn'>
-// 					<FaTimes onClick={showNavBar} />
-// 				</button>
-// 			</nav>
-// 			<button className='nav-btn'>
-// 				<FaBars onClick={showNavBar} />
-// 			</button>
-// 		</div>
-// 	);
-// };
-
-// export default Sidebar;

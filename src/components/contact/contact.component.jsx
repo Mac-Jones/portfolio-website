@@ -24,7 +24,7 @@ const Contact = () => {
 
 	if (state.succeeded) {
 		return (
-			<section id='contact' className='contact'>
+			<section id='contacts-section' className='contact'>
 				<div className='contact__header'>
 					<h1>Contact Me</h1>
 				</div>
